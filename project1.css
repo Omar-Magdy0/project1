@@ -1,0 +1,240 @@
+
+
+
+
+
+
+
+
+/*basic classes-----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+html { 
+    background: url("project1.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 100%;
+    margin:0px;
+    padding: 0px;
+  }
+
+  body{margin:0px;
+    padding: 0px;
+  }
+
+.nav{box-sizing: border-box;
+  z-index: 2;
+    position:fixed;
+    width: 350px;
+    height: 350px;
+    left: calc(5%);
+    top: calc(-5%);
+    border-radius: 350px;
+    background: url(navphoto.jpg);
+    border: 1px solid rgba(94, 72, 72, 0.5);}
+
+
+.status-shower{height: 50px; width: 100%;
+   background-color:  rgba(194, 194, 194, 0.877);
+  border-radius: 0 0 100px 100px;}
+
+.resource-container{width:30% ;margin: auto;height: auto;
+position: fixed;top: 400px;left: 5%;
+display:none;
+}
+    
+#play_pause{width: 90px; height: 90px ;
+  margin: 0 calc(50% - 45px);
+   opacity: 0.8;
+   background-image: url("play.png");background-size: cover ;
+  border-radius: 90px;
+border: none;}
+
+
+#secNav{width: calc(32% - 175px);height: 125px;
+  position: fixed; left: calc(5% + 175px); top:0px;
+  margin: 0px ;padding-left: 175px;
+  z-index: 1;
+   float:left;
+   background-image: url('secNavBg2.png');background-size: cover;
+   
+}
+
+
+
+.secNavBox{width: 40% ;height:calc(100% - 40px)  ; 
+padding-top: 40px;
+margin: 0px 5%;
+display:block;
+float:left;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+font-size: 30px;
+font-family:'Brush Script MT',cursive;
+
+
+}
+
+
+        #lyricsBox{
+        width: fit-content;
+        height: auto;
+        white-space: pre;
+        position: absolute;
+        padding-right:50px;
+        display:initial;
+        left: 50%; top: 100px ;
+        padding-bottom: 50px;
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 2em;
+        line-height:  30px;
+        text-align: center;
+        color: #ffffff;
+        display: block;
+            }
+
+            
+
+            #ArtistNameMenu{height: 300px ;width: calc( 28.8% -  157.5px );
+              display: none; overflow-y: auto;
+            background-color: rgba(194, 194, 194, 0.95); z-index: 4;
+            position:fixed;left:calc( 6.5%  + 341.25px ) ;top:125px;
+            opacity: 1;
+            
+            }
+
+            #SongNameMenu{height: 300px ;width: calc( 28.8% -  157.5px );
+              display: none;overflow-y: auto;
+            background-color: rgba(194, 194, 194, 0.95); z-index: 4;
+            position: fixed;left:calc( 6.5% + 341.25px  ) ;top:125px;}
+
+
+
+
+            .MenuItem{display:block;height: fit-content;padding: 15px 10px ;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 25px ;}
+
+            
+
+
+/*pseudo classes--------------------------------------------------*/
+::-webkit-scrollbar{display:none;}
+
+
+
+
+
+/*Hovers------------------------------------------------------------*/
+
+
+
+
+            .secNavBox:hover
+           {background-color: rgba(179, 151, 151, 0.342); }
+
+
+           .secNavBox:hover #ArtistNameMenu{display: block;}
+           .secNavBox:hover #SongNameMenu{display: block;}
+
+           .MenuItem:hover {background-color: rgba(194, 194, 215, 1);}
+           
+
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+
+/*media Qeurys-------------------------------------------------*/
+
+
+            /* media Query condition 1 */
+            @media only screen and (max-width: 1500px){
+              
+              #lyricsBox{position: relative;
+                left:20% ;top: 350px;}
+
+                #secNav{width : calc(95% - 350px) ;height: 125px;
+                  position: fixed; left: calc(5% + 175px); top:0px;}
+
+                    #ArtistNameMenu{width: calc( 38% - 140px );
+                      left:calc( 9.75%  + 332.5px) ;top:125px;}
+
+                    #SongNameMenu{ width: calc( 38% - 140px );
+                      left:calc( 57.25%  + 157.5px ) ;top:125px;}
+              }
+
+
+
+              /* media Query condition 2 */
+              @media only screen and (max-width: 1000px){
+
+                 #lyricsBox{left:10%;position: relative;top:150px;font-size: 1.4rem;}
+              
+                .nav {width: 200px;
+                  height: 200px;
+                  top: -2%;
+                  background-size: cover;}
+
+
+                  #secNav{width: calc(95% - 200px);height: 75px;
+                    position: fixed; left: calc(5% + 100px); top:0px;
+                    padding-left: 100px;}
+
+                  
+                
+                    .secNavBox{padding-top: 25px;height: calc( 100% - 25px)
+                }
+
+
+                #ArtistNameMenu{width: calc( 38% - 80px );
+                  left:calc( 9.75%  + 190px) ;top:75px;}
+
+                #SongNameMenu{ width: calc( 38% - 80px );
+                  left:calc( 57.25%  + 90px ) ;top:75px;}
+              
+              
+                }
+
+
+
+
+                /* media Query condition 3 */
+                @media only screen and (max-width: 800px){
+                  #lyricsBox{margin:auto;left:5%;
+                  position: relative;
+                  font-size: 25px;
+                  font-weight:100;
+                  }
+                  .secNavBox{padding-top: 15px;height: calc( 100% - 15px)
+                }
+
+                #ArtistNameMenu{width: calc( 45% - 80px );
+                  left:calc( 9.75%  + 190px) ;top:75px;}
+
+                #SongNameMenu{ width: calc( 45% - 80px );
+                  left:calc( 50.25%  + 90px ) ;top:75px;}
+
+                
+              }
+
+               
